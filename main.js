@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const accessToken =
-  "ROTIrmBnGpGQYEO3dUDizWL5u3altbhouXe8oOPS1WFY9VRdku6w4vDUf1XN6Pja"; // Replace with your actual token
+  "HE0eFWG2Y_V3Kh4ws6rc5su2jbiKJBpQiTChewkij-gxxVfjd4nfzbjX3jBg_RVQ"; // Replace with your actual token
 
 // Function to search for a song by title
 const searchSong = async (songTitle) => {

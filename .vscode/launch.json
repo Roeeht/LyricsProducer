@@ -12,7 +12,7 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/main.js",
-            "runtimeExecutable": "/Users/roeehabaritamir/.nvm/versions/node/v22.6.0/bin/node"
+            "runtimeExecutable":"/home/roeeht/.nvm/versions/node/v20.16.0/bin/node"
 
         }
     ]

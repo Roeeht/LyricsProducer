@@ -6,18 +6,21 @@ const GeniusSearch = () => {
   const [results, setResults] = useState([]);
 
   const accessToken =
-    "ROTIrmBnGpGQYEO3dUDizWL5u3altbhouXe8oOPS1WFY9VRdku6w4vDUf1XN6Pja"; // Replace with your actual token
+    "HE0eFWG2Y_V3Kh4ws6rc5su2jbiKJBpQiTChewkij-gxxVfjd4nfzbjX3jBg_RVQ"; // Replace with your actual token
 
   const searchSong = async () => {
     try {
-      const response = await axios.get(`https://api.genius.com/search`, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-        params: {
-          q: songTitle,
-        },
-      });
+      const response = await axios.get(
+        `http://localhost:5000/api/genius/search`,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+          params: {
+            q: songTitle,
+          },
+        }
+      );
 
       const hits = response.data.response.hits;
       if (hits.length > 0) {
