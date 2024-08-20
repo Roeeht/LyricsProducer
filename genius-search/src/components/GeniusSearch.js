@@ -3,14 +3,14 @@ import axios from "axios";
 import "./GeniusSearch.css";
 
 const GeniusSearch = () => {
-  const [songTitle, setSongTitle] = useState("");
+  const [songKeyword, setSongKeyword] = useState("");
   const [results, setResults] = useState([]);
   const accessToken =
     "HE0eFWG2Y_V3Kh4ws6rc5su2jbiKJBpQiTChewkij-gxxVfjd4nfzbjX3jBg_RVQ"; // Replace with your actual token
 
-  const searchSong = async () => {
+  const searchKeyword = async () => {
     try {
-      const hits = await fetchGeniusSearchResults(songTitle, accessToken);
+      const hits = await fetchGeniusSearchResults(songKeyword, accessToken);
       const processedResults = processSearchResults(hits);
       setResults(processedResults);
     } catch (error) {
@@ -23,12 +23,12 @@ const GeniusSearch = () => {
       <h1 className="heading">Genius Song Search</h1>
       <input
         type="text"
-        value={songTitle}
-        onChange={(e) => setSongTitle(e.target.value)}
+        value={songKeyword}
+        onChange={(e) => setSongKeyword(e.target.value)}
         placeholder="Enter song title"
         className="input"
       />
-      <button onClick={searchSong} className="button">
+      <button onClick={searchKeyword} className="button">
         Search
       </button>
 
@@ -60,7 +60,7 @@ const GeniusSearch = () => {
   );
 };
 
-const fetchGeniusSearchResults = async (songTitle, accessToken) => {
+const fetchGeniusSearchResults = async (songKeyword, accessToken) => {
   try {
     const response = await axios.get(
       `http://localhost:5000/api/genius/search`,
@@ -69,7 +69,7 @@ const fetchGeniusSearchResults = async (songTitle, accessToken) => {
           Authorization: `Bearer ${accessToken}`,
         },
         params: {
-          q: songTitle,
+          q: songKeyword,
         },
       }
     );
