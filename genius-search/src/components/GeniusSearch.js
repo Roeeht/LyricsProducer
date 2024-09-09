@@ -5,10 +5,18 @@ import "./GeniusSearch.css";
 const GeniusSearch = () => {
   const [songKeyword, setSongKeyword] = useState("");
   const [results, setResults] = useState([]);
+  const [error, setError] = useState(""); // New state for handling empty input errors
+
   const accessToken =
     "HE0eFWG2Y_V3Kh4ws6rc5su2jbiKJBpQiTChewkij-gxxVfjd4nfzbjX3jBg_RVQ"; // Replace with your actual token
 
   const searchKeyword = async () => {
+    if (songKeyword.trim() === "") {
+      setError("Please enter a keyword"); // Set error if input is empty
+      return;
+    }
+    setError(""); // Clear error if input is valid
+
     try {
       const hits = await fetchGeniusSearchResults(songKeyword, accessToken);
       const processedResults = processSearchResults(hits);
@@ -21,13 +29,19 @@ const GeniusSearch = () => {
   return (
     <div className="container">
       <h1 className="heading">Genius Song Search</h1>
-      <input
-        type="text"
-        value={songKeyword}
-        onChange={(e) => setSongKeyword(e.target.value)}
-        placeholder="Enter song title"
-        className="input"
-      />
+      <div className="input-container">
+        <input
+          type="text"
+          value={songKeyword}
+          onChange={(e) => setSongKeyword(e.target.value)}
+          placeholder="Enter song title"
+          className="input"
+          required
+        />
+        {/* Display error message on the same line */}
+        {error && <p className="error-message">{error}</p>}
+      </div>
+
       <button onClick={searchKeyword} className="button">
         Search
       </button>

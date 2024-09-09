@@ -9,7 +9,7 @@
   .heading {
     font-size: 36px;
     margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     color: #333;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -74,5 +74,16 @@
   
   .result-link:hover {
     text-decoration: underline;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .error-message {
+    margin-left: 10px; /* Add space between input and error */
+    color: red;
+    font-size: 0.9em;
   }
   
