@@ -1,89 +1,89 @@
-/* GeniusSearch.css */
-
+/* GeniusSearch.css - Keep as is */
 .container {
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-  }
-  
-  .heading {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-family: 'Helvetica', sans-serif;
-    color: #333;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .input {
-    padding: 10px;
-    width: 300px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #45a049;
-  }
-  
-  .results {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .result-item {
-    margin-bottom: 15px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .result-item:hover {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-  }
-  
-  .result-title {
-    font-weight: bold;
-    color: #222;
-  }
-  
-  .result-artist {
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  .result-link {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  .result-link:hover {
-    text-decoration: underline;
-  }
-  
-  .input-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .error-message {
-    margin-left: 10px; /* Add space between input and error */
-    color: red;
-    font-size: 0.9em;
-  }
-  
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Helvetica', sans-serif;
+  color: #333;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Result Item Styles (Keep these for your new components) */
+.results {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.result-item:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.result-title {
+  font-weight: bold;
+  color: #222;
+}
+
+.result-artist {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.result-link {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.result-link:hover {
+  text-decoration: underline;
+}
+
+/* Utility and Layout Helpers */
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.error-message {
+  margin-left: 10px; /* Add space between input and error */
+  color: red;
+  font-size: 0.9em;
+}

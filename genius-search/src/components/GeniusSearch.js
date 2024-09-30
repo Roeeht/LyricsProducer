@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Result from "./Result";
 import axios from "axios";
 import "./GeniusSearch.css";
 
@@ -50,20 +51,12 @@ const GeniusSearch = () => {
         {results.length > 0 ? (
           <ul>
             {results.map((result, index) => (
-              <li key={index} className="results-item">
-                <span className="result-title">Title:</span> {result.title}{" "}
-                <br />
-                <span className="result-artist">Artist:</span> {result.artist}{" "}
-                <br />
-                <a
-                  href={result.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="result-link"
-                >
-                  View on Genius
-                </a>
-              </li>
+              <Result
+                key={index}
+                title={result.title}
+                artist={result.artist}
+                result={result}
+              />
             ))}
           </ul>
         ) : (
