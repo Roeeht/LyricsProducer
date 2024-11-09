@@ -25,7 +25,15 @@ The app fetches the lyrics using the Genius API and displays them for easy acces
     ```bash
     npm install
     ```
+3. **move to application directory**: 
+    ```bash
+    cd genius-search
+    ```
 3. **Run the application**: 
     ```bash
     npm start
+    ```
+3. **Run the application server**: 
+    ```bash
+    cd genius-search/src; node server.js 
     ```
