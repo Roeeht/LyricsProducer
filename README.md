@@ -19,7 +19,7 @@ The app fetches the lyrics using the Genius API and displays them for easy acces
 
 1. **Clone the repository**: 
     ```bash
-    git clone https://github.com/yourusername/lyrics-producer
+    git clone https://github.com/roeeht/lyrics-producer
     ```
 2. **Install dependencies**: 
     ```bash
