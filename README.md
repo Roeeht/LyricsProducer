@@ -5,6 +5,9 @@
 **LyricsProducer** is a web application that allows users to search for the lyrics of any song by simply entering the song's name.
 The app fetches the lyrics using the Genius API and displays them for easy access.
 
+![Alt text](genius-search/public/demo.gif)
+
+
 ## Features
 
 - **Song Search**: Users can enter the name of a song to retrieve its lyrics.
