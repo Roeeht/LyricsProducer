@@ -39,13 +39,11 @@ const GeniusSearch = () => {
           className="input"
           required
         />
-        {/* Display error message on the same line */}
+        <button onClick={searchKeyword} className="button">
+          Search
+        </button>{" "}
         {error && <p className="error-message">{error}</p>}
       </div>
-
-      <button onClick={searchKeyword} className="button">
-        Search
-      </button>
 
       <div className="results">
         {results.length > 0 ? (
