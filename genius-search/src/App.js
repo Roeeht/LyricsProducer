@@ -1,11 +1,15 @@
 import "./App.css";
-import React from "react";
-import GeniusSearch from "./components/GeniusSearch";
+import React, { useState } from "react";
+import FetchGenius from "./components/FetchGenius";
+import ResultList from "./components/ResultList";
 
 function App() {
+  const [results, setResults] = useState([])
+
   return (
     <div>
-      <GeniusSearch />
+      <FetchGenius onResultsFetched={setResults} />
+      <ResultList results={results}/>
     </div>
   );
 }
